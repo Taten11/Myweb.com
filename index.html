@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Simple Store</h1>
+        <nav>
+            <a href="#products">Products</a>
+            <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
+            <a href="#login">Login</a>
+            <a href="#admin" id="adminLink">Admin</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="login">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="loginEmail" placeholder="Email" required><br>
+                <input type="password" id="loginPassword" placeholder="Password" required><br>
+                <input type="submit" value="Log In">
+            </form>
+        </section>
+
+        <section id="signup">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <input type="text" id="signupName" placeholder="Full Name" required><br>
+                <input type="text" id="signupEmail" placeholder="Email" required><br>
+                <input type="password" id="signupPassword" placeholder="Password" required><br>
+                <input type="submit" value="Sign Up">
+            </form>
+        </section>
+
+        <section id="products">
+            <h2>Products</h2>
+            <div id="productList">
+                <!-- Products will be dynamically added here -->
+            </div>
+        </section>
+
+        <section id="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="total-price">0.00</span></p>
+        </section>
+
+        <section id="admin" style="display: none;">
+            <h2>Admin Panel</h2>
+            <form id="adminPasswordForm">
+                <input type="password" id="adminPassword" placeholder="Admin Password" required><br>
+                <input type="submit" value="Submit">
+            </form>
+            <div id="adminControls" style="display: none;">
+                <form id="addProductForm">
+                    <input type="text" id="productName" placeholder="Product Name" required><br>
+                    <input type="number" id="productPrice" placeholder="Price" step="0.01" required><br>
+                    <input type="text" id="productImage" placeholder="Image URL" required><br>
+                    <input type="submit" value="Add Product">
+                </form>
+                <form id="removeProductForm">
+                    <input type="text" id="removeProductName" placeholder="Product Name to Remove" required><br>
+                    <input type="submit" value="Remove Product">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Simple Store</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
